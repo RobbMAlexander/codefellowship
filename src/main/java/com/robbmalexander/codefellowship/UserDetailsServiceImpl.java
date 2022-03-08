@@ -1,4 +1,4 @@
-package com.robbmalexander.codefellowship.config;
+package com.robbmalexander.codefellowship;
 
 import com.robbmalexander.codefellowship.model.ApplicationUser;
 import com.robbmalexander.codefellowship.repository.ApplicationUserRepository;

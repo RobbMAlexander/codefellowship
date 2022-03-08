@@ -10,5 +10,14 @@
 </head>
 <body>
 
+<h2 th:if="${username == null}">Please <a href="/login">log in to join the discussion.</a></h2>
+<h2 th:unless="${username == null}" th:text="'Hi, ' + firstName + '!'"></h2>
+
+<p>Welcome to Codefellowship-- a community for those learning to code.</p>
+
+<form action="/logout" th:method="delete">
+    <input type="submit" value="Log Out">
+</form>
+
 </body>
 </html>

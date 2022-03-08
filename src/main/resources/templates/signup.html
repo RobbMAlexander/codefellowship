@@ -11,7 +11,19 @@
 <body>
 <h1>Create An Account</h1>
 
-
+<form action="/signup" method="post">
+    <label for="username">Username</label>
+    <input type="text" name="username">
+    <br><label for="firstName">First Name</label>
+    <input type="text" name="nickName">
+    <br><label for="lastName">Last Name</label>
+    <input type="bio" name="Personal Bio">
+    <br><label for="dateOfBirth">Date Of Birth</label>
+    <input type="datetime-local" name="dateOfBirth">
+    <br><label for="password">Password</label>
+    <input type="password" name="password">
+    <input type="submit" value="Sign Up">
+</form>
 
 <h3>Already have one? <a href="/login">Log in.</a></h3>
 
