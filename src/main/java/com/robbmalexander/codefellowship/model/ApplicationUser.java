@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class ApplicationUser implements UserDetails {
@@ -105,6 +106,14 @@ public class ApplicationUser implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @OneToMany(mappedBy ="postingUser")
+    @OrderBy("postId")
+    List<Post> userPosts;
+
+    public List<Post> getUserPosts(){
+        return userPosts;
     }
 
 }
