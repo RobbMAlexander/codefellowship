@@ -43,7 +43,7 @@ public class ApplicationUserController {
     public String getHomePage(Principal principal, Model model) {
         if (principal != null) {
             String username = principal.getName();
-            ApplicationUser applicationUser = applicationUserRepository.findByUserName(username);
+            ApplicationUser applicationUser = applicationUserRepository.findByUsername(username);
             String firstName = applicationUser.getFirstName();
             String lastName = applicationUser.getLastName();
             String bio = applicationUser.getBio();
